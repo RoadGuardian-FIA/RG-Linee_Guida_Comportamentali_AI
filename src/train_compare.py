@@ -10,6 +10,7 @@ import os
 import sys
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -26,26 +27,49 @@ def load_and_prepare_data(data_path: str):
     X = df.drop('protocol_id', axis=1)
     y = df['protocol_id']
     
-    # Encode categorical features
+    # Fields to exclude from direct encoding (will be processed separately)
+    text_field = 'descrizione'
+    datetime_field = 'data_ora'
+    
+    # Extract text descriptions for TF-IDF
+    descriptions = X[text_field].values if text_field in X.columns else None
+    
+    # Remove text and datetime fields from main features temporarily
+    X_categorical = X.drop(columns=[text_field, datetime_field], errors='ignore')
+    
+    # Encode only categorical features
     label_encoders = {}
-    for column in X.columns:
-        if X[column].dtype == 'object':
+    categorical_columns = ['gravita', 'categoria']
+    
+    for column in categorical_columns:
+        if column in X_categorical.columns and X_categorical[column].dtype == 'object':
             le = LabelEncoder()
-            X[column] = le.fit_transform(X[column])
+            X_categorical[column] = le.fit_transform(X_categorical[column])
             label_encoders[column] = le
     
-    print(f"Data loaded: {len(df)} samples, {len(X.columns)} features")
-    print(f"Features: {list(X.columns)}")
+    # Vectorize descriptions using TF-IDF
+    tfidf_vectorizer = None
+    if descriptions is not None:
+        tfidf_vectorizer = TfidfVectorizer(max_features=20, stop_words=None)
+        tfidf_features = tfidf_vectorizer.fit_transform(descriptions).toarray()
+        
+        # Combine categorical/numeric features with TF-IDF features
+        X_combined = np.hstack([X_categorical.values, tfidf_features])
+    else:
+        X_combined = X_categorical.values
+    
+    print(f"Data loaded: {len(df)} samples, {X_combined.shape[1]} features")
+    print(f"Features: {list(X_categorical.columns)} + TF-IDF({tfidf_features.shape[1]} features)")
     print(f"Target classes: {sorted(y.unique())}")
     
-    return X.values, y.values, label_encoders
+    return X_combined, y.values, label_encoders, tfidf_vectorizer
 
 
 def train_and_compare(data_path: str, model_output_dir: str):
     """Train both models, compare them, and save the best one"""
     
     # Load and prepare data
-    X, y, label_encoders = load_and_prepare_data(data_path)
+    X, y, label_encoders, tfidf_vectorizer = load_and_prepare_data(data_path)
     
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(
@@ -121,11 +145,17 @@ def train_and_compare(data_path: str, model_output_dir: str):
     results[best_model_name]['model'].save(best_model_path)
     print(f"\nBest model saved to: {best_model_path}")
     
-    # Also save label encoders for later use
+    # Also save label encoders and TF-IDF vectorizer for later use
     encoders_path = os.path.join(model_output_dir, 'label_encoders.pkl')
     with open(encoders_path, 'wb') as f:
         pickle.dump(label_encoders, f)
     print(f"Label encoders saved to: {encoders_path}")
+    
+    # Save TF-IDF vectorizer
+    tfidf_path = os.path.join(model_output_dir, 'tfidf_vectorizer.pkl')
+    with open(tfidf_path, 'wb') as f:
+        pickle.dump(tfidf_vectorizer, f)
+    print(f"TF-IDF vectorizer saved to: {tfidf_path}")
     
     return best_model_name, results[best_model_name]['metrics']
 

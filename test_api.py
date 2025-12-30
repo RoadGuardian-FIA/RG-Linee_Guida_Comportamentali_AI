@@ -79,43 +79,47 @@ def main():
     # Test predict endpoint with various scenarios
     test_cases = [
         {
-            "name": "Standard Accident (Highway, Rain, Night)",
+            "name": "Tamponamento ad alta gravità",
             "data": {
-                "incident_type": "accident",
-                "severity": "high",
-                "location_type": "highway",
-                "weather": "rain",
-                "time_of_day": "night"
+                "gravita": "high",
+                "data_ora": "2024-01-15 08:30:00",
+                "latitudine": 45.4642,
+                "longitudine": 9.1900,
+                "descrizione": "Tamponamento multiplo su autostrada",
+                "categoria": "tamponamento"
             }
         },
         {
-            "name": "Traffic Violation (Urban, Clear, Day)",
+            "name": "Collisione con ostacolo a bassa gravità",
             "data": {
-                "incident_type": "violation",
-                "severity": "low",
-                "location_type": "urban",
-                "weather": "clear",
-                "time_of_day": "day"
+                "gravita": "low",
+                "data_ora": "2024-01-15 14:20:00",
+                "latitudine": 45.4700,
+                "longitudine": 9.1850,
+                "descrizione": "Veicolo contro guard-rail",
+                "categoria": "collisione_con_ostacolo"
             }
         },
         {
-            "name": "High-Risk Incident (Urban, Snow, Night)",
+            "name": "Investimento ad alta gravità",
             "data": {
-                "incident_type": "accident",
-                "severity": "high",
-                "location_type": "urban",
-                "weather": "snow",
-                "time_of_day": "night"
+                "gravita": "high",
+                "data_ora": "2024-01-17 22:15:00",
+                "latitudine": 45.4720,
+                "longitudine": 9.1910,
+                "descrizione": "Investimento pedone su strada urbana",
+                "categoria": "investimento"
             }
         },
         {
-            "name": "Urban High-Priority (Violation, Clear, Night)",
+            "name": "Incendio veicolo ad alta gravità",
             "data": {
-                "incident_type": "violation",
-                "severity": "high",
-                "location_type": "urban",
-                "weather": "clear",
-                "time_of_day": "night"
+                "gravita": "high",
+                "data_ora": "2024-01-19 21:30:00",
+                "latitudine": 45.4710,
+                "longitudine": 9.1920,
+                "descrizione": "Incendio veicolo in area urbana",
+                "categoria": "incendio_veicolo"
             }
         }
     ]
@@ -130,15 +134,16 @@ def main():
     
     # Test error handling
     test_endpoint(
-        "Error Handling: Invalid Incident Type",
+        "Error Handling: Invalid Category",
         "POST",
         "/predict",
         {
-            "incident_type": "invalid",
-            "severity": "high",
-            "location_type": "highway",
-            "weather": "rain",
-            "time_of_day": "night"
+            "gravita": "high",
+            "data_ora": "2024-01-15 08:30:00",
+            "latitudine": 45.4642,
+            "longitudine": 9.1900,
+            "descrizione": "Incidente non valido",
+            "categoria": "invalid_category"
         }
     )
     

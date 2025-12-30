@@ -22,25 +22,28 @@ app = FastAPI(
 # Global variables for model and data
 model = None
 label_encoders = None
+tfidf_vectorizer = None
 rules = None
 
 
 class IncidentInput(BaseModel):
     """Input model for incident data"""
-    incident_type: str = Field(..., description="Tipo di incidente (accident, violation)")
-    severity: str = Field(..., description="Gravità (low, medium, high)")
-    location_type: str = Field(..., description="Tipo di località (highway, urban, rural)")
-    weather: str = Field(..., description="Condizioni meteo (clear, rain, snow, fog)")
-    time_of_day: str = Field(..., description="Momento della giornata (day, night)")
+    gravita: str = Field(..., description="Gravità (low, medium, high)")
+    data_ora: str = Field(..., description="Data e ora dell'incidente (formato: YYYY-MM-DD HH:MM:SS)")
+    latitudine: float = Field(..., description="Latitudine GPS")
+    longitudine: float = Field(..., description="Longitudine GPS")
+    descrizione: str = Field(..., description="Descrizione dell'incidente")
+    categoria: str = Field(..., description="Categoria (tamponamento, collisione_con_ostacolo, veicoli_fuori_strada, investimento, incendio_veicolo)")
     
     class Config:
         json_schema_extra = {
             "example": {
-                "incident_type": "accident",
-                "severity": "high",
-                "location_type": "highway",
-                "weather": "rain",
-                "time_of_day": "night"
+                "gravita": "high",
+                "data_ora": "2024-01-15 08:30:00",
+                "latitudine": 45.4642,
+                "longitudine": 9.1900,
+                "descrizione": "Tamponamento multiplo su autostrada",
+                "categoria": "tamponamento"
             }
         }
 
@@ -54,12 +57,13 @@ class ProtocolResponse(BaseModel):
 
 
 def load_model():
-    """Load the trained model and label encoders"""
-    global model, label_encoders
+    """Load the trained model, label encoders, and TF-IDF vectorizer"""
+    global model, label_encoders, tfidf_vectorizer
     
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     model_path = os.path.join(base_dir, 'models', 'best_model.pkl')
     encoders_path = os.path.join(base_dir, 'models', 'label_encoders.pkl')
+    tfidf_path = os.path.join(base_dir, 'models', 'tfidf_vectorizer.pkl')
     
     if not os.path.exists(model_path):
         raise FileNotFoundError(
@@ -73,13 +77,22 @@ def load_model():
             "Please run train_compare.py first to save the label encoders."
         )
     
+    if not os.path.exists(tfidf_path):
+        raise FileNotFoundError(
+            f"TF-IDF vectorizer file not found: {tfidf_path}. "
+            "Please run train_compare.py first to save the TF-IDF vectorizer."
+        )
+    
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
     
     with open(encoders_path, 'rb') as f:
         label_encoders = pickle.load(f)
     
-    print("Model and label encoders loaded successfully")
+    with open(tfidf_path, 'rb') as f:
+        tfidf_vectorizer = pickle.load(f)
+    
+    print("Model, label encoders, and TF-IDF vectorizer loaded successfully")
 
 
 def load_rules():
@@ -135,7 +148,8 @@ async def health_check():
         "status": "healthy",
         "model_loaded": model is not None,
         "rules_loaded": rules is not None,
-        "label_encoders_loaded": label_encoders is not None
+        "label_encoders_loaded": label_encoders is not None,
+        "tfidf_vectorizer_loaded": tfidf_vectorizer is not None
     }
 
 
@@ -155,7 +169,7 @@ async def predict_protocol(incident: IncidentInput):
     
     Takes incident details and returns the predicted protocol with guidelines
     """
-    if model is None or label_encoders is None:
+    if model is None or label_encoders is None or tfidf_vectorizer is None:
         raise HTTPException(
             status_code=500,
             detail="Model not loaded. Please train the model first by running train_compare.py"
@@ -165,8 +179,8 @@ async def predict_protocol(incident: IncidentInput):
         raise HTTPException(status_code=500, detail="Rules not loaded")
     
     try:
-        # Prepare input data in the same order as training
-        features = ['incident_type', 'severity', 'location_type', 'weather', 'time_of_day']
+        # Prepare categorical and numeric features
+        features = ['gravita', 'latitudine', 'longitudine', 'categoria']
         input_data = []
         
         incident_dict = incident.dict()
@@ -174,7 +188,7 @@ async def predict_protocol(incident: IncidentInput):
         for feature in features:
             value = incident_dict[feature]
             
-            # Encode using the saved label encoder
+            # Encode using the saved label encoder for categorical features
             if feature in label_encoders:
                 encoder = label_encoders[feature]
                 # Handle unknown categories
@@ -187,10 +201,16 @@ async def predict_protocol(incident: IncidentInput):
                 encoded_value = encoder.transform([value])[0]
                 input_data.append(encoded_value)
             else:
+                # For numeric features (latitudine, longitudine)
                 input_data.append(value)
         
+        # Vectorize the description using TF-IDF
+        descrizione_vector = tfidf_vectorizer.transform([incident_dict['descrizione']]).toarray()[0]
+        
+        # Combine all features
+        X = np.array([input_data + list(descrizione_vector)])
+        
         # Make prediction
-        X = np.array([input_data])
         protocol_id = int(model.predict(X)[0])
         
         # Get protocol information from rules

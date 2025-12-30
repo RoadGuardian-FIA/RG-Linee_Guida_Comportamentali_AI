@@ -1,4 +1,4 @@
-# RG-LGAI - Linee Guida Comportamentali AI
+# RG-Linee_Guida_Comportamentali_AI
 
 Sistema di intelligenza artificiale per la classificazione degli incidenti stradali e la raccomandazione di protocolli comportamentali appropriati.
 
@@ -9,7 +9,7 @@ Questo progetto implementa un sistema basato su Machine Learning (scikit-learn) 
 ## Struttura del Progetto
 
 ```
-RG-LGAI/
+RG-Linee_Guida_Comportamentali_AI/
 ├── data/
 │   ├── train.csv          # Dataset di addestramento
 │   └── rules.json         # Knowledge base con protocolli comportamentali
@@ -45,8 +45,8 @@ RG-LGAI/
 
 1. Clona il repository:
 ```bash
-git clone https://github.com/RoadGuardian-FIA/RG-LGAI.git
-cd RG-LGAI
+git clone https://github.com/RoadGuardian-FIA/RG-Linee_Guida_Comportamentali_AI.git
+cd RG-Linee_Guida_Comportamentali_AI
 ```
 
 2. Installa le dipendenze:
@@ -179,11 +179,12 @@ Esempio di richiesta:
 curl -X POST "http://localhost:8000/predict" \
   -H "Content-Type: application/json" \
   -d '{
-    "incident_type": "accident",
-    "severity": "high",
-    "location_type": "highway",
-    "weather": "rain",
-    "time_of_day": "night"
+    "gravita": "high",
+    "data_ora": "2024-01-15 08:30:00",
+    "latitudine": 45.4642,
+    "longitudine": 9.1900,
+    "descrizione": "Tamponamento multiplo su autostrada",
+    "categoria": "tamponamento"
   }'
 ```
 
@@ -226,11 +227,17 @@ Lo script testa:
 
 Il dataset di addestramento contiene le seguenti colonne:
 
-- `incident_type`: Tipo di incidente (accident, violation)
-- `severity`: Gravità (low, medium, high)
-- `location_type`: Tipo di località (highway, urban, rural)
-- `weather`: Condizioni meteo (clear, rain, snow, fog)
-- `time_of_day`: Momento della giornata (day, night)
+- `gravita`: Gravità dell'incidente (low, medium, high)
+- `data_ora`: Data e ora dell'incidente (formato: YYYY-MM-DD HH:MM:SS)
+- `latitudine`: Latitudine GPS dell'incidente
+- `longitudine`: Longitudine GPS dell'incidente
+- `descrizione`: Descrizione testuale dell'incidente
+- `categoria`: Categoria dell'incidente
+  - `tamponamento`: Collisione tra veicoli in sequenza
+  - `collisione_con_ostacolo`: Veicolo contro oggetto fisso
+  - `veicoli_fuori_strada`: Veicolo uscito dalla carreggiata
+  - `investimento`: Pedone o ciclista investito
+  - `incendio_veicolo`: Veicolo in fiamme
 - `protocol_id`: ID del protocollo appropriato (target)
 
 ### rules.json

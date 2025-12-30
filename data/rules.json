@@ -1,0 +1,47 @@
+{
+  "1": {
+    "protocol_name": "Standard Accident Response",
+    "description": "Protocollo per incidenti stradali standard",
+    "guidelines": [
+      "Garantire la sicurezza della scena",
+      "Chiamare i servizi di emergenza se necessario",
+      "Documentare l'incidente con foto e testimonianze",
+      "Compilare il rapporto di incidente standard",
+      "Notificare le autorità competenti entro 24 ore"
+    ]
+  },
+  "2": {
+    "protocol_name": "Traffic Violation Protocol",
+    "description": "Protocollo per violazioni del codice della strada",
+    "guidelines": [
+      "Identificare il tipo di violazione",
+      "Raccogliere prove fotografiche o video",
+      "Emettere verbale di contestazione",
+      "Registrare i dettagli nel sistema centralizzato",
+      "Informare il trasgressore delle procedure di ricorso"
+    ]
+  },
+  "3": {
+    "protocol_name": "High-Risk Incident Protocol",
+    "description": "Protocollo per incidenti ad alto rischio",
+    "guidelines": [
+      "Evacuare l'area circostante se necessario",
+      "Attivare immediatamente i servizi di emergenza",
+      "Istituire un perimetro di sicurezza",
+      "Coordinare con squadre specializzate (pompieri, ambulanze)",
+      "Documentare accuratamente con reportistica dettagliata",
+      "Avviare indagine approfondita entro 48 ore"
+    ]
+  },
+  "4": {
+    "protocol_name": "Urban High-Priority Protocol",
+    "description": "Protocollo per situazioni urbane prioritarie",
+    "guidelines": [
+      "Gestire il traffico per evitare ulteriori congestioni",
+      "Coordinare con la polizia locale",
+      "Implementare deviazioni temporanee se necessario",
+      "Monitorare l'impatto sulla mobilità urbana",
+      "Comunicare tempestivamente con i cittadini tramite canali ufficiali"
+    ]
+  }
+}

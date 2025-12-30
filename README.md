@@ -29,7 +29,7 @@ RG-Linee_Guida_Comportamentali_AI/
 ## Caratteristiche
 
 - **Addestramento Automatico**: Confronto tra DecisionTree e RandomForest
-- **Selezione Modello**: Selezione automatica del modello migliore basata su F1-Score
+- **Selezione Modello**: Selezione automatica del modello migliore basata su Precision, Recall e F1-Score
 - **API REST**: Interfaccia FastAPI per predizioni in tempo reale
 - **Knowledge Base**: Protocolli comportamentali strutturati in JSON
 - **Metriche**: Valutazione con Precision, Recall e F1-Score
@@ -244,15 +244,16 @@ Il dataset di addestramento contiene le seguenti colonne:
 
 Knowledge base con i protocolli comportamentali:
 
-- **Protocol 1**: Standard Accident Response
-- **Protocol 2**: Traffic Violation Protocol
-- **Protocol 3**: High-Risk Incident Protocol
-- **Protocol 4**: Urban High-Priority Protocol
+- **Protocol 1**: Protocollo Tamponamento - Gestione di collisioni tra veicoli
+- **Protocol 2**: Protocollo Collisione con Ostacolo - Per impatti con ostacoli fissi
+- **Protocol 3**: Protocollo Veicolo Fuori Strada - Per veicoli usciti dalla carreggiata
+- **Protocol 4**: Protocollo Investimento - Per investimento di pedoni o ciclisti
+- **Protocol 5**: Protocollo Incendio Veicolo - Per veicoli in fiamme
 
 Ogni protocollo include:
 - `protocol_name`: Nome del protocollo
 - `description`: Descrizione
-- `guidelines`: Lista di linee guida comportamentali
+- `guidelines`: Lista di linee guida comportamentali specifiche
 
 ## Architettura
 

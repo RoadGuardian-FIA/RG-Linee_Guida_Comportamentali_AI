@@ -1,41 +1,41 @@
 gravita,data_ora,latitudine,longitudine,descrizione,categoria,protocol_id
 high,2024-01-15 08:30:00,45.4642,9.1900,Tamponamento multiplo su autostrada,tamponamento,1
 low,2024-01-15 14:20:00,45.4700,9.1850,Veicolo contro guard-rail,collisione_con_ostacolo,2
-medium,2024-01-16 09:45:00,45.4580,9.1920,Auto finita fuori carreggiata,veicoli_fuori_strada,1
-medium,2024-01-16 18:30:00,45.4650,9.1880,Tamponamento a catena,tamponamento,2
-high,2024-01-17 22:15:00,45.4720,9.1910,Investimento pedone su strada urbana,investimento,3
+medium,2024-01-16 09:45:00,45.4580,9.1920,Auto finita fuori carreggiata,veicoli_fuori_strada,3
+medium,2024-01-16 18:30:00,45.4650,9.1880,Tamponamento a catena,tamponamento,1
+high,2024-01-17 22:15:00,45.4720,9.1910,Investimento pedone su strada urbana,investimento,4
 low,2024-01-18 11:00:00,45.4600,9.1860,Veicolo contro albero,collisione_con_ostacolo,2
 low,2024-01-18 15:45:00,45.4680,9.1895,Tamponamento lieve,tamponamento,1
-high,2024-01-19 21:30:00,45.4710,9.1920,Incendio veicolo in area urbana,incendio_veicolo,4
-medium,2024-01-20 10:20:00,45.4590,9.1870,Auto ribaltata fuori strada,veicoli_fuori_strada,1
+high,2024-01-19 21:30:00,45.4710,9.1920,Incendio veicolo in area urbana,incendio_veicolo,5
+medium,2024-01-20 10:20:00,45.4590,9.1870,Auto ribaltata fuori strada,veicoli_fuori_strada,3
 low,2024-01-20 16:00:00,45.4670,9.1890,Collisione con palo della luce,collisione_con_ostacolo,2
-high,2024-01-21 12:30:00,45.4640,9.1905,Tamponamento con feriti gravi,tamponamento,3
-medium,2024-01-21 19:45:00,45.4620,9.1875,Veicolo finito nel fosso,veicoli_fuori_strada,2
+high,2024-01-21 12:30:00,45.4640,9.1905,Tamponamento con feriti gravi,tamponamento,1
+medium,2024-01-21 19:45:00,45.4620,9.1875,Veicolo finito nel fosso,veicoli_fuori_strada,3
 low,2024-01-22 08:15:00,45.4695,9.1915,Tamponamento senza feriti,tamponamento,1
 high,2024-01-22 23:00:00,45.4705,9.1925,Investimento pedone con feriti,investimento,4
-medium,2024-01-23 13:30:00,45.4615,9.1865,Auto contro muretto,collisione_con_ostacolo,1
-low,2024-01-23 17:20:00,45.4685,9.1900,Tamponamento leggero,tamponamento,2
-high,2024-01-24 07:45:00,45.4730,9.1930,Incendio veicolo su autostrada,incendio_veicolo,3
-medium,2024-01-24 14:10:00,45.4605,9.1855,Veicolo ribaltato,veicoli_fuori_strada,2
-low,2024-01-25 10:50:00,45.4660,9.1885,Collisione con segnaletica,collisione_con_ostacolo,1
+medium,2024-01-23 13:30:00,45.4615,9.1865,Auto contro muretto,collisione_con_ostacolo,2
+low,2024-01-23 17:20:00,45.4685,9.1900,Tamponamento leggero,tamponamento,1
+high,2024-01-24 07:45:00,45.4730,9.1930,Incendio veicolo su autostrada,incendio_veicolo,5
+medium,2024-01-24 14:10:00,45.4605,9.1855,Veicolo ribaltato,veicoli_fuori_strada,3
+low,2024-01-25 10:50:00,45.4660,9.1885,Collisione con segnaletica,collisione_con_ostacolo,2
 high,2024-01-25 20:30:00,45.4725,9.1935,Investimento multiplo,investimento,4
-medium,2024-01-26 09:00:00,45.4595,9.1845,Auto fuori strada in curva,veicoli_fuori_strada,1
-low,2024-01-26 15:30:00,45.4675,9.1892,Tamponamento in coda,tamponamento,2
-high,2024-01-27 22:45:00,45.4715,9.1928,Incendio veicolo con rischio esplosione,incendio_veicolo,3
+medium,2024-01-26 09:00:00,45.4595,9.1845,Auto fuori strada in curva,veicoli_fuori_strada,3
+low,2024-01-26 15:30:00,45.4675,9.1892,Tamponamento in coda,tamponamento,1
+high,2024-01-27 22:45:00,45.4715,9.1928,Incendio veicolo con rischio esplosione,incendio_veicolo,5
 medium,2024-01-28 11:30:00,45.4610,9.1858,Collisione contro barriera,collisione_con_ostacolo,2
 low,2024-01-28 16:15:00,45.4655,9.1882,Tamponamento a bassa velocità,tamponamento,1
 high,2024-01-29 23:30:00,45.4740,9.1940,Investimento con fuga,investimento,4
-medium,2024-01-30 12:00:00,45.4625,9.1872,Veicolo uscito di strada,veicoli_fuori_strada,1
+medium,2024-01-30 12:00:00,45.4625,9.1872,Veicolo uscito di strada,veicoli_fuori_strada,3
 low,2024-01-30 18:00:00,45.4690,9.1908,Collisione lieve con ostacolo,collisione_con_ostacolo,2
-high,2024-01-31 08:45:00,45.4735,9.1938,Incendio veicolo in galleria,incendio_veicolo,3
+high,2024-01-31 08:45:00,45.4735,9.1938,Incendio veicolo in galleria,incendio_veicolo,5
 medium,2024-02-01 13:15:00,45.4600,9.1850,Auto contro guard-rail su curva,collisione_con_ostacolo,2
 low,2024-02-01 17:45:00,45.4665,9.1887,Tamponamento in parcheggio,tamponamento,1
 high,2024-02-02 21:00:00,45.4720,9.1932,Investimento pedone su strisce,investimento,4
-medium,2024-02-03 10:30:00,45.4580,9.1840,Veicolo capottato,veicoli_fuori_strada,1
+medium,2024-02-03 10:30:00,45.4580,9.1840,Veicolo capottato,veicoli_fuori_strada,3
 low,2024-02-03 15:00:00,45.4670,9.1890,Collisione con cartello stradale,collisione_con_ostacolo,2
-high,2024-02-04 07:30:00,45.4745,9.1945,Tamponamento multiplo con feriti,tamponamento,3
-medium,2024-02-04 19:30:00,45.4630,9.1878,Auto finita nel canale,veicoli_fuori_strada,2
+high,2024-02-04 07:30:00,45.4745,9.1945,Tamponamento multiplo con feriti,tamponamento,1
+medium,2024-02-04 19:30:00,45.4630,9.1878,Auto finita nel canale,veicoli_fuori_strada,3
 low,2024-02-05 11:45:00,45.4650,9.1884,Tamponamento senza danni,tamponamento,1
-high,2024-02-05 22:30:00,45.4710,9.1925,Incendio veicolo con feriti,incendio_veicolo,4
-medium,2024-02-06 14:30:00,45.4585,9.1842,Auto contro muro di contenimento,collisione_con_ostacolo,1
-low,2024-02-06 18:30:00,45.4680,9.1898,Tamponamento in rotatoria,tamponamento,2
+high,2024-02-05 22:30:00,45.4710,9.1925,Incendio veicolo con feriti,incendio_veicolo,5
+medium,2024-02-06 14:30:00,45.4585,9.1842,Auto contro muro di contenimento,collisione_con_ostacolo,2
+low,2024-02-06 18:30:00,45.4680,9.1898,Tamponamento in rotatoria,tamponamento,1

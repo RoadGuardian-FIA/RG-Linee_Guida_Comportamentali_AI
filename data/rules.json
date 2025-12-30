@@ -1,47 +1,71 @@
 {
   "1": {
-    "protocol_name": "Standard Accident Response",
-    "description": "Protocollo per incidenti stradali standard",
+    "protocol_name": "Protocollo Tamponamento",
+    "description": "Protocollo specifico per incidenti da tamponamento tra veicoli",
     "guidelines": [
-      "Garantire la sicurezza della scena",
-      "Chiamare i servizi di emergenza se necessario",
-      "Documentare l'incidente con foto e testimonianze",
-      "Compilare il rapporto di incidente standard",
-      "Notificare le autorità competenti entro 24 ore"
+      "Accertarsi che tutti i veicoli coinvolti siano fermi e sicuri",
+      "Attivare le luci di emergenza e posizionare il triangolo",
+      "Verificare le condizioni di salute degli occupanti",
+      "Compilare il modulo CID (Constatazione Amichevole) se possibile",
+      "Documentare la scena con foto (posizione veicoli, danni, targa)",
+      "Chiamare le autorità se ci sono feriti o contestazioni",
+      "Spostare i veicoli solo se non ostacolano il traffico e dopo la documentazione"
     ]
   },
   "2": {
-    "protocol_name": "Traffic Violation Protocol",
-    "description": "Protocollo per violazioni del codice della strada",
+    "protocol_name": "Protocollo Collisione con Ostacolo",
+    "description": "Protocollo per collisioni con ostacoli fissi (guard-rail, muri, alberi, pali)",
     "guidelines": [
-      "Identificare il tipo di violazione",
-      "Raccogliere prove fotografiche o video",
-      "Emettere verbale di contestazione",
-      "Registrare i dettagli nel sistema centralizzato",
-      "Informare il trasgressore delle procedure di ricorso"
+      "Arrestare il veicolo in posizione sicura se possibile",
+      "Valutare l'integrità strutturale del veicolo",
+      "Verificare eventuali perdite di fluidi (carburante, olio)",
+      "Segnalare la presenza di ostacoli danneggiati che possono costituire pericolo",
+      "Documentare i danni all'infrastruttura pubblica",
+      "Contattare l'ente proprietario della strada per ostacoli danneggiati",
+      "Chiamare soccorso meccanico se il veicolo non è in condizioni di marcia"
     ]
   },
   "3": {
-    "protocol_name": "High-Risk Incident Protocol",
-    "description": "Protocollo per incidenti ad alto rischio",
+    "protocol_name": "Protocollo Veicolo Fuori Strada",
+    "description": "Protocollo per veicoli usciti dalla carreggiata",
     "guidelines": [
-      "Evacuare l'area circostante se necessario",
-      "Attivare immediatamente i servizi di emergenza",
-      "Istituire un perimetro di sicurezza",
-      "Coordinare con squadre specializzate (pompieri, ambulanze)",
-      "Documentare accuratamente con reportistica dettagliata",
-      "Avviare indagine approfondita entro 48 ore"
+      "Valutare la sicurezza della propria posizione prima di uscire dal veicolo",
+      "Chiamare immediatamente i soccorsi se ci sono feriti",
+      "Non tentare di rimettere il veicolo in strada autonomamente",
+      "Segnalare il veicolo con luci di emergenza se possibile",
+      "Evacuare i passeggeri in posizione sicura lontano dalla carreggiata",
+      "Attendere i mezzi di soccorso in area protetta",
+      "Coordinare con vigili del fuoco se il veicolo è in posizione pericolosa (scarpata, fosso)"
     ]
   },
   "4": {
-    "protocol_name": "Urban High-Priority Protocol",
-    "description": "Protocollo per situazioni urbane prioritarie",
+    "protocol_name": "Protocollo Investimento",
+    "description": "Protocollo per investimento di pedoni o ciclisti",
     "guidelines": [
-      "Gestire il traffico per evitare ulteriori congestioni",
-      "Coordinare con la polizia locale",
-      "Implementare deviazioni temporanee se necessario",
-      "Monitorare l'impatto sulla mobilità urbana",
-      "Comunicare tempestivamente con i cittadini tramite canali ufficiali"
+      "Chiamare IMMEDIATAMENTE il 118 e le forze dell'ordine",
+      "NON spostare la persona investita a meno di pericolo immediato",
+      "Mettere in sicurezza l'area circostante",
+      "Se la persona è cosciente, rassicurarla e mantenerla ferma",
+      "Coprire la persona con coperta termica se disponibile",
+      "Documentare la scena con precisione (posizione, segni di frenata)",
+      "Identificare eventuali testimoni e raccogliere i loro contatti",
+      "NON lasciare il luogo dell'incidente",
+      "Collaborare pienamente con le autorità per la ricostruzione dinamica"
+    ]
+  },
+  "5": {
+    "protocol_name": "Protocollo Incendio Veicolo",
+    "description": "Protocollo per incendi che coinvolgono veicoli",
+    "guidelines": [
+      "Chiamare IMMEDIATAMENTE il 115 (Vigili del Fuoco) e il 112",
+      "Evacuare tutti gli occupanti dal veicolo rapidamente",
+      "Allontanarsi dal veicolo di almeno 100 metri",
+      "NON tentare di spegnere l'incendio se non con estintore e solo se piccolo",
+      "Bloccare il traffico e impedire l'avvicinamento di altri veicoli",
+      "Avvisare se il veicolo trasporta materiali pericolosi o bombole GPL",
+      "Evacuare edifici vicini se l'incendio è vicino a strutture",
+      "Attendere i Vigili del Fuoco in posizione sicura sopravvento",
+      "Non respirare i fumi tossici"
     ]
   }
 }

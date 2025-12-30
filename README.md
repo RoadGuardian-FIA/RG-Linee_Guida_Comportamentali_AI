@@ -56,6 +56,24 @@ pip install -r requirements.txt
 
 ## Utilizzo
 
+### Quick Start
+
+Per un test rapido dell'intero sistema:
+
+```bash
+# 1. Installa le dipendenze
+pip install -r requirements.txt
+
+# 2. Addestra i modelli
+python src/train_compare.py
+
+# 3. Avvia l'API (in un terminale)
+python src/main.py
+
+# 4. Testa l'API (in un altro terminale)
+python test_api.py
+```
+
 ### 1. Addestramento dei Modelli
 
 Prima di utilizzare l'API, è necessario addestrare i modelli:
@@ -185,6 +203,22 @@ Esempio di risposta:
   ]
 }
 ```
+
+### Test Automatico
+
+È disponibile uno script di test automatico che verifica tutti gli endpoint dell'API:
+
+```bash
+# Assicurati che l'API sia in esecuzione, poi:
+python test_api.py
+```
+
+Lo script testa:
+- Root endpoint
+- Health check
+- Lista protocolli
+- Predizioni per diversi scenari
+- Gestione errori
 
 ## Dataset
 

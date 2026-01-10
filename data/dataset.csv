@@ -1,0 +1,100 @@
+Severity,Incident_Type,Road_Type,Daylight,Bump,Crossing,Give_Way,Junction,Railway,Roundabout,Stop,Traffic_Signal,Turning_Loop,Target_Label
+low,Collisione con ostacolo,tertiary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,residential,false,false,false,false,false,true,false,false,false,false,ARRESTO_OBBLIGATORIO
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Investimento,tertiary,true,false,true,false,false,false,false,false,true,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,primary_secondary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,tertiary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+medium,Tamponamento,motorway_trunk,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Tamponamento,residential,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Veicolo Fuori Strada,motorway_trunk,true,false,false,false,true,false,false,false,false,false,EMERGENZA_CRITICA
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Tamponamento,residential,true,false,false,false,false,false,false,true,false,false,ARRESTO_OBBLIGATORIO
+low,Tamponamento,unclassified,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Investimento,residential,true,false,true,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Tamponamento,motorway_trunk,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Tamponamento,residential,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Collisione con ostacolo,residential,false,false,false,false,false,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Tamponamento,motorway_trunk,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Veicolo Fuori Strada,unclassified,true,false,false,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,primary_secondary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Collisione con ostacolo,tertiary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,primary_secondary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Veicolo Fuori Strada,motorway_trunk,false,false,false,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Investimento,unclassified,true,false,false,false,false,true,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+high,Veicolo Fuori Strada,tertiary,false,false,false,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,motorway_trunk,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Collisione con ostacolo,residential,true,false,false,false,false,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Investimento,tertiary,true,false,true,false,false,false,false,true,false,false,EMERGENZA_CRITICA
+low,Investimento,residential,false,false,false,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Tamponamento,motorway_trunk,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Tamponamento,motorway_trunk,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Veicolo Fuori Strada,unclassified,true,false,false,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Investimento,tertiary,true,false,true,false,false,false,false,false,true,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,unclassified,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Tamponamento,residential,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+medium,Tamponamento,residential,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Investimento,residential,true,false,true,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+medium,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Investimento,motorway_trunk,false,false,true,false,false,false,false,false,true,false,EMERGENZA_CRITICA
+low,Tamponamento,primary_secondary,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Collisione con ostacolo,unclassified,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Collisione con ostacolo,primary_secondary,true,false,true,false,false,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,unclassified,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+medium,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,tertiary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,motorway_trunk,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,motorway_trunk,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+medium,Tamponamento,motorway_trunk,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+medium,Collisione con ostacolo,unclassified,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+medium,Tamponamento,motorway_trunk,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,true,false,false,ARRESTO_OBBLIGATORIO
+low,Collisione con ostacolo,motorway_trunk,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+medium,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,tertiary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,motorway_trunk,false,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+high,Tamponamento,primary_secondary,false,false,false,false,true,false,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+medium,Tamponamento,unclassified,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,primary_secondary,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Tamponamento,residential,true,true,false,false,false,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Collisione con ostacolo,tertiary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Collisione con ostacolo,motorway_trunk,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,unclassified,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Investimento,tertiary,true,false,true,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Collisione con ostacolo,primary_secondary,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+medium,Tamponamento,motorway_trunk,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+medium,Collisione con ostacolo,motorway_trunk,true,false,false,false,false,false,false,false,false,false,GESTIONE_SINISTRO
+low,Investimento,tertiary,true,false,true,false,false,false,false,false,false,false,EMERGENZA_CRITICA
+low,Tamponamento,residential,true,false,false,false,true,false,false,false,false,false,ZONA_RESIDENZIALE_CRITICA
+low,Tamponamento,unclassified,true,false,false,false,true,false,false,false,false,false,PRUDENZA_INTERSEZIONE
+low,Collisione con ostacolo,unclassified,false,false,false,false,false,false,false,false,false,false,GUIDA_NOTTURNA_EXTRAURBANA
+low,Tamponamento,primary_secondary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Tamponamento,tertiary,true,false,false,false,false,false,false,false,true,false,ARRESTO_OBBLIGATORIO
+low,Investimento,tertiary,true,false,true,false,false,false,false,false,true,false,EMERGENZA_CRITICA... (10 MB rimanenti)

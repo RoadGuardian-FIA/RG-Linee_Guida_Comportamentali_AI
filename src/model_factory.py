@@ -132,7 +132,7 @@ class DecisionTreeModel(ModelBase):
         Parametri:
         - max_depth (int): Profondità massima dell'albero (default: 10).
         - random_state (int): Seed per riproducibilità (default: 42).
-        - class_weight (str): Strategia pesi classi ('balanced' o None).
+        - class_weight (str): Strategia pesi classi (pesi_classi_incidenti).
 
         Valore di ritorno:
         - None
@@ -160,7 +160,7 @@ class RandomForestModel(ModelBase):
         - n_estimators (int): Numero di alberi nella foresta (default: 100).
         - max_depth (int): Profondità massima di ogni albero (default: 10).
         - random_state (int): Seed per riproducibilità (default: 42).
-        - class_weight (str): Strategia pesi classi ('balanced' o None).
+        - class_weight (str): Strategia pesi classi (pesi_classi_incidenti).
 
         Valore di ritorno:
         - None

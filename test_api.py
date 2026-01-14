@@ -15,7 +15,7 @@ import requests
 import time
 
 # URL base dell'API da testare
-API_URL = "http://localhost:8000"
+API_URL = "http://localhost:8001"
 
 
 @pytest.fixture(scope="module")

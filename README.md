@@ -1,14 +1,14 @@
-# RG-Linee_Guida_Comportamentali_AI
+# RoadGuardian-FIA
 
-Sistema intelligente per la classificazione di scenari stradali e l'erogazione di protocolli comportamentali di sicurezza basato su Machine Learning.
+Sistema basato su AI per la classificazione di scenari stradali e l'erogazione di linee guida comportamentali comportamentali di sicurezza basato su Machine Learning.
 
 ## Descrizione
 
-Questo progetto implementa un sistema "Safety-First" per guidatori. A partire da dati telemetrici e segnalazioni di incidenti, il sistema:
+Questo progetto implementa un sistema "Safety-First" per guidatori. A partire da dati telemetrici e segnalazioni di incidenti fornite tramite l'app [RoadGuardian](https://github.com/RoadGuardianGPS-IS), il sistema:
 
 1. **Classifica lo scenario** utilizzando un modello ML (RandomForest/DecisionTree) addestrato su dati etichettati.
 2. **Assegna un protocollo di sicurezza** specifico (es. "Emergenza Critica", "Zona Residenziale").
-3. **Recupera le linee guida operative** da un database JSON separato.
+3. **Recupera le linee guida operative** da un database JSON.
 
 Il sistema è progettato per dare priorità alla sicurezza fisica immediata (es. fermarsi per un incendio) rispetto alle normali regole del codice della strada.
 
@@ -238,6 +238,9 @@ Risultati tipici del training (su dataset bilanciato ~80k samples):
 | DecisionTree       | 99.95%       | 99.94%        |
 | **RandomForest**   | **99.97%**   | **99.96%**    |
 
+## Ulteriori informazioni sul modello
+
+Vedi il report [RoadGuardian-FIA_report](https://drive.google.com/file/d/1sFEVv7fEYkk3NtcMRR_EmC7R0XI1oDR4/view?usp=sharing) per ulteriori dettagli sulle pipelines e i risultati.
 ## Licenza
 
 Vedi il file [LICENSE](LICENSE) per i dettagli.
